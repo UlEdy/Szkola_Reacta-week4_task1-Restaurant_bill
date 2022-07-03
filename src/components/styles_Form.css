@@ -1,0 +1,8 @@
+.visible {
+	visibility: hidden;
+}
+
+.userChoice {
+  margin: 2px;
+  padding: 2px;
+}
