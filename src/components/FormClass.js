@@ -20,11 +20,12 @@ class FormClass extends React.Component {
 
 	handleSubmit = event => event.preventDefault();
 
-  clickMore = () => this.setState((prevShow) => ({showMore: !prevShow}));
+  clickMore = () => this.setState(
+		(prevShow) => ({showMore: !prevShow.showMore})
+	);
 
 	getGrossPrice = () => {
-		this.setState((prevSum) => ({sum: Number(prevSum.price) + Number(prevSum.price) * Number(prevSum.tip)}))
-    this.clickMore();
+		this.setState((prevSum) => ({sum: Number(prevSum.price) + Number(prevSum.price) * Number(prevSum.tip)}), () => this.clickMore());
 	};
 
   render() {
